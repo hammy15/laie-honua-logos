@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laie Honua LLC — Logo Concepts v2</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&family=Playfair+Display:wght@700;900&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #080808;
+    color: #fff;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  
+  .header h1 {
+    font-size: 2.4rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  
+  .header p {
+    color: #666;
+    font-size: 0.95rem;
+    font-weight: 300;
+  }
+
+  .header .sub {
+    color: #555;
+    font-size: 0.78rem;
+    margin-top: 10px;
+    font-style: italic;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 28px;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background: #111;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    border: 1px solid #1a1a1a;
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+    border-color: #333;
+  }
+  
+  .card-icon {
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-icon svg {
+    width: 100%;
+    height: 100%;
+    max-width: 280px;
+    max-height: 280px;
+  }
+  
+  .card-info {
+    padding: 18px 22px 22px;
+    border-top: 1px solid #1a1a1a;
+  }
+  
+  .card-info .type-tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    margin-right: 4px;
+    font-weight: 700;
+  }
+  
+  .card-info h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .card-info p {
+    font-size: 0.8rem;
+    color: #777;
+    line-height: 1.6;
+  }
+  
+  .color-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-overlay.active { display: flex; }
+  .modal-content {
+    background: #131313;
+    border-radius: 20px;
+    padding: 44px;
+    max-width: 500px;
+    width: 92%;
+    text-align: center;
+    border: 1px solid #222;
+  }
+  .modal-content svg {
+    width: 260px;
+    height: 260px;
+    margin-bottom: 20px;
+  }
+  .modal-content h2 { font-size: 1.3rem; margin-bottom: 8px; }
+  .modal-content p { color: #888; font-size: 0.85rem; line-height: 1.6; }
+  .modal-close {
+    margin-top: 20px;
+    background: #252525;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 10px 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 500;
+  }
+  .modal-close:hover { background: #353535; }
+
+  .footer {
+    text-align: center;
+    margin-top: 60px;
+    color: #333;
+    font-size: 0.72rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Laie Honua</h1>
+  <p>GC · Development · Flips · Real Estate · Vacation Rental</p>
+  <p class="sub">10 Concepts — Land Contours + Tribal Hawaiian + Bright Colors — Hammond & Bonds</p>
+</div>
+
+<div class="grid">
+
+  <!-- ============================================================ -->
+  <!-- 1. VOLCANIC SHIELD — No Words — Hot Pink/Magenta -->
+  <!-- ============================================================ -->
+  <div class="card" onclick="openModal(0)">
+    <div class="card-icon" style="background:#0a0a0a">
+      <svg viewBox="0 0 300 300" fill="none">
+        <defs>
+          <clipPath id="s1">
+            <path d="M150 25 L265 100 L265 210 Q265 270 150 285 Q35 270 35 210 L35 100Z"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#s1)">
+          <path d="M15 270 Q80 248 150 258 Q220 268 285 248" stroke="#FF2D87" stroke-width="3" fill="none" opacity="0.3"/>
+          <path d="M15 248 Q82 224 150 234 Q218 244 285 224" stroke="#FF2D87" stroke-width="3" fill="none" opacity="0.38"/>
+          <path d="M15 226 Q84 200 150 210 Q216 220 285 200" stroke="#FF2D87" stroke-width="3" fill="none" opacity="0.45"/>
+          <path d="M15 204 Q86 176 150 186 Q214 196 285 176" stroke="#FF2D87" stroke-width="3" fill="none" opacity="0.52"/>
+          <path d="M15 182 Q88 152 150 162 Q212 172 285 152" stroke="#FF2D87" stroke-width="3.5" fill="none" opacity="0.6"/>
+          <path d="M15 160 Q90 128 150 138 Q210 148 285 128" stroke="#FF2D87" stroke-width="3.5" fill="none" opacity="0.68"/>
+          <path d="M15 138 Q92 104 150 114 Q208 124 285 104" stroke="#FF2D87" stroke-width="3.5" fill="none" opacity="0.76"/>
+          <path d="M15 116 Q94 80 150 90 Q206 100 285 80" stroke="#FF2D87" stroke-width="4" fill="none" opacity="0.84"/>
+          <path d="M15 94 Q96 56 150 66 Q204 76 285 56" stroke="#FF2D87" stroke-width="4" fill="none" opacity="0.92"/>
+          <path d="M15 72 Q98 32 150 42 Q202 52 285 32" stroke="#FF2D87" stroke-width="4" fill="none"/>
+          <!-- Tribal zigzag band -->
+          <path d="M25 155 L50 140 L75 155 L100 140 L125 155 L150 140 L175 155 L200 140 L225 155 L250 140 L275 155" stroke="#FF2D87" stroke-width="5.5" fill="none"/>
+          <path d="M25 168 L50 183 L75 168 L100 183 L125 168 L150 183 L175 168 L200 183 L225 168 L250 183 L275 168" stroke="#FF2D87" stroke-width="5.5" fill="none"/>
+        </g>
+        <path d="M150 25 L265 100 L265 210 Q265 270 150 285 Q35 270 35 210 L35 100Z" stroke="#FF2D87" stroke-width="5" fill="none"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <span class="type-tag" style="background:#FF2D8720;color:#FF2D87">No Text</span>
+      <span class="type-tag" style="background:#FF2D8720;color:#FF2D87">Shield</span>
+      <h3><span class="color-dot" style="background:#FF2D87"></span>Volcanic Shield</h3>
+      <p>Warrior shield with topo contour lines and tribal zigzag band. Protection of the land. Works at any size — hard hat to billboard.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 2. TWIN PEAKS — "LAIE HONUA" text below — Emerald -->
+  <!-- ============================================================ -->
+  <div class="card" onclick="openModal(1)">
+    <div class="card-icon" style="background:#0a0a0a">
+      <svg viewBox="0 0 300 320" fill="none">
+        <defs>
+          <clipPath id="s2">
+            <path d="M30 230 L110 55 L150 130 L190 55 L270 230Z"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#s2)">
+          <path d="M10 230 Q80 218 150 224 Q220 230 290 218" stroke="#00D68F" stroke-width="3" fill="none"/>
+          <path d="M10 208 Q82 194 150 200 Q218 206 290 194" stroke="#00D68F" stroke-width="3" fill="none"/>
+          <path d="M10 186 Q84 170 150 176 Q216 182 290 170" stroke="#00D68F" stroke-width="3" fill="none"/>
+          <path d="M10 164 Q86 146 150 152 Q214 158 290 146" stroke="#00D68F" stroke-width="3.5" fill="none"/>
+          <path d="M10 142 Q88 122 150 128 Q212 134 290 122" stroke="#00D68F" stroke-width="3.5" fill="none"/>
+          <path d="M10 120 Q90 98 150 104 Q210 110 290 98" stroke="#00D68F" stroke-width="3.5" fill="none"/>
+          <path d="M10 98 Q92 74 150 80 Q208 86 290 74" stroke="#00D68F" stroke-width="4" fill="none"/>
+          <path d="M10 76 Q94 50 150 56 Q206 62 290 50" stroke="#00D68F" stroke-width="4" fill="none"/>
+          <!-- Tribal wave band -->
+          <path d="M30 160 Q55 145 80 160 Q105 175 130 160 Q155 145 180 160 Q205 175 230 160 Q255 145 280 160" stroke="#00D68F" stroke-width="5" fill="none"/>
+        </g>
+        <path d="M30 230 L110 55 L150 130 L190 55 L270 230Z" stroke="#00D68F" stroke-width="5" fill="none"/>
+        <line x1="20" y1="236" x2="280" y2="236" stroke="#00D68F" stroke-width="3" opacity="0.4"/>
+        <!-- Text below -->
+        <text x="150" y="275" text-anchor="middle" fill="#00D68F" font-family="Inter, sans-serif" font-weight="900" font-size="24" letter-spacing="6">LAIE HONUA</text>
+        <text x="150" y="298" text-anchor="middle" fill="#00D68F" font-family="Inter, sans-serif" font-weight="300" font-size="11" letter-spacing="4" opacity="0.5">LLC</text>
+      </svg>
+    </div>
+    <div class="card-info">
+      <span class="type-tag" style="background:#00D68F20;color:#00D68F">With Name</span>
+      <span class="type-tag" style="background:#00D68F20;color:#00D68F">Abstract</span>
+      <h3><span class="color-dot" style="background:#00D68F"></span>Twin Peaks</h3>
+      <p>Two mountain peaks (two partners) with contour lines and tribal wave. "LAIE HONUA" set clean below.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 3. CONTOUR LH — Lettermark filled — Electric Blue + Gold -->
+  <!-- ============================================================ -->
+  <div class="card" onclick="openModal(2)">
+    <div class="card-icon" style="background:#0a0a0a">
+      <svg viewBox="0 0 300 300" fill="none">
+        <defs>
+          <clipPath id="s3">
+            <!-- L and H side by side -->
+            <path d="M30 40 L80 40 L80 210 L145 210 L145 260 L30 260Z M160 40 L210 40 L210 130 L250 130 L250 40 L300 40 L300 260 L250 260 L250 175 L210 175 L210 260 L160 260Z"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#s3)">
+          <!-- Left side: blue contour lines -->
+          <path d="M20 55 Q90 44 165 52 Q240 60 310 48" stroke="#3B82F6" stroke-width="4.5" fill="none"/>
+          <path d="M20 82 Q90 70 165 78 Q240 86 310 74" stroke="#3B82F6" stroke-width="4.5" fill="none"/>
+          <path d="M20 109 Q90 96 165 104 Q240 112 310 100" stroke="#3B82F6" stroke-width="4.5" fill="none"/>
+          <path d="M20 136 Q90 122 165 130 Q240 138 310 126" stroke="#FFB800" stroke-width="4.5" fill="none"/>
+          <!-- Tribal diamond band across middle -->
+          <path d="M20 148 L42 138 L64 148 L86 138 L108 148 L130 138 L152 148 L174 138 L196 148 L218 138 L240 148 L262 138 L284 148 L306 138" stroke="#FFB800" stroke-width="5" fill="none"/>
+          <path d="M20 162 L42 172 L64 162 L86 172 L108 162 L130 172 L152 162 L174 172 L196 162 L218 172 L240 162 L262 172 L284 162 L306 172" stroke="#FFB800" stroke-width="5" fill="none"/>
+          <!-- Right side: gold contour lines -->
+          <path d="M20 184 Q90 170 165 178 Q240 186 310 174" stroke="#FFB800" stroke-width="4.5" fill="none"/>
+          <path d="M20 210 Q90 196 165 204 Q240 212 310 200" stroke="#FFB800" stroke-width="4.5" fill="none"/>
+          <path d="M20 236 Q90 222 165 230 Q240 238 310 226" stroke="#FFB800" stroke-width="4.5" fill="none"/>
+        </g>
+        <path d="M30 40 L80 40 L80 210 L145 210 L145 260 L30 260Z" stroke="#3B82F6" stroke-width="3.5" fill="none"/>
+        <path d="M160 40 L210 40 L210 130 L250 130 L250 40 L300 40 L300 260 L250 260 L250 175 L210 175 L210 260 L160 260Z" stroke="#FFB800" stroke-width="3.5" fill="none"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <span class="type-tag" style="background:#3B82F620;color:#3B82F6">Lettermark</span>
+      <span class="type-tag" style="background:#FFB80020;color:#FFB800">Split Color</span>
+      <h3><span class="color-dot" style="background:#3B82F6"></span><span class="color-dot" style="background:#FFB800"></span>LH Contour</h3>
+      <p>Laie Honua initials — L in blue, H in gold — filled with flowing topo contours and tribal diamond band. Closest to your reference image.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 4. ISLAND CREST — "LaieHonua.com" — Bright Orange -->
+  <!-- ============================================================ -->
+  <div class="card" onclick="openModal(3)">
+    <div class="card-icon" style="background:#0a0a0a">
+      <svg viewBox="0 0 300 340" fill="none">
+        <defs>
+          <clipPath id="s4">
+            <ellipse cx="150" cy="150" rx="125" ry="128"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#s4)">
+          <path d="M15 260 Q82 242 150 250 Q218 258 285 240" stroke="#FF6B00" stroke-width="3" fill="none" opacity="0.35"/>
+          <path d="M15 236 Q84 216 150 224 Q216 232 285 214" stroke="#FF6B00" stroke-width="3" fill="none" opacity="0.42"/>
+          <path d="M15 212 Q86 190 150 198 Q214 206 285 190" stroke="#FF6B00" stroke-width="3" fill="none" opacity="0.48"/>
+          <path d="M15 188 Q88 164 150 172 Q212 180 285 166" stroke="#FF6B00" stroke-width="3" fill="none" opacity="0.55"/>
+          <path d="M15 164 Q90 138 150 146 Q210 154 285 142" stroke="#FF6B00" stroke-width="3.5" fill="none" opacity="0.62"/>
+          <path d="M15 140 Q92 112 150 120 Q208 128 285 118" stroke="#FF6B00" stroke-width="3.5" fill="none" opacity="0.7"/>
+          <path d="M15 116 Q94 86 150 94 Q206 102 285 94" stroke="#FF6B00" stroke-width="3.5" fill="none" opacity="0.78"/>
+          <path d="M15 92 Q96 60 150 68 Q204 76 285 68" stroke="#FF6B00" stroke-width="4" fill="none" opacity="0.86"/>
+          <path d="M15 68 Q98 34 150 42 Q202 50 285 42" stroke="#FF6B00" stroke-width="4" fill="none" opacity="0.94"/>
+          <!-- Mountain peaks center -->
+          <path d="M75 200 L125 100 L150 130 L175 90 L225 200" fill="#FF6B00" opacity="0.1"/>
+          <path d="M75 200 L125 100 L150 130 L175 90 L225 200" stroke="#FF6B00" stroke-width="4" fill="none"/>
+          <!-- Tribal triangle border -->
+          <g opacity="0.8">
+            <path d="M150 18 L157 34 L143 34Z" fill="#FF6B00"/>
+            <path d="M222 38 L229 54 L215 54Z" fill="#FF6B00" transform="rotate(25,222,46)"/>
+            <path d="M270 85 L277 101 L263 101Z" fill="#FF6B00" transform="rotate(55,270,93)"/>
+            <path d="M280 150 L287 166 L273 166Z" fill="#FF6B00" transform="rotate(90,280,158)"/>
+            <path d="M265 215 L272 231 L258 231Z" fill="#FF6B00" transform="rotate(125,265,223)"/>
+            <path d="M218 262 L225 278 L211 278Z" fill="#FF6B00" transform="rotate(155,218,270)"/>
+            <path d="M150 282 L157 298 L143 298Z" fill="#FF6B00" transform="rotate(180,150,290)"/>
+            <path d="M82 262 L89 278 L75 278Z" fill="#FF6B00" transform="rotate(205,82,270)"/>
+            <path d="M35 215 L42 231 L28 231Z" fill="#FF6B00" transform="rotate(235,35,223)"/>
+            <path d="M20 150 L27 166 L13 166Z" fill="#FF6B00" transform="rotate(270,20,158)"/>
+            <path d="M30 85 L37 101 L23 101Z" fill="#FF6B00" transform="rotate(305,30,93)"/>
+            <path d="M78 38 L85 54 L71 54Z" fill="#FF6B00" transform="rotate(335,78,46)"/>
+          </g>
+        </g>
+        <ellipse cx="150" cy="150" rx="125" ry="128" stroke="#FF6B00" stroke-width="5" fill="none"/>
+        <!-- URL below -->
+        <text x="150" y="310" text-anchor="middle" fill="#FF6B00" font-family="Inter, sans-serif" font-weight="500" font-size="16" letter-spacing="2" opacity="0.8">LaieHonua.com</text>
+      </svg>
+    </div>
+    <div class="card-info">
+      <span class="type-tag" style="background:#FF6B0020;color:#FF6B00">With URL</span>
+      <span class="type-tag" style="background:#FF6B0020;color:#FF6B00">Crest Badge</span>
+      <h3><span class="color-dot" style="background:#FF6B00"></span>Island Crest</h3>
+      <p>Oval crest with volcano peaks, topo contours, tribal triangle border. "LaieHonua.com" below.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 5. MAKAU WAVE — No Words — Electric Purple -->
+  <!-- ============================================================ -->
+  <div class="card" onclick="openModal(4)">
+    <div class="card-icon" style="background:#0a0a0a">
+      <svg viewBox="0 0 300 300" fill="none">
+        <!-- Flowing contour lines as backdrop -->
+        <path d="M20 240 Q75 218 130 228 Q185 238 240 215 Q268 204 285 212" stroke="#A855F7" stroke-width="4.5" fill="none"/>
+        <path d="M20 212 Q78 186 132 198 Q186 210 242 184 Q270 172 285 182" stroke="#A855F7" stroke-width="4.5" fill="none"/>
+        <path d="M20 184 Q80 154 134 168 Q188 182 244 154 Q272 140 285 152" stroke="#A855F7" stroke-width="4.5" fill="none"/>
+        <path d="M20 156 Q82 122 136 138 Q190 154 246 124 Q274 108 285 122" stroke="#A855F7" stroke-width="4.5" fill="none"/>
+        <path d="M20 128 Q84 90 138 108 Q192 126 248 94 Q276 76 285 92" stroke="#A855F7" stroke-width="4.5" fill="none"/>
+        <path d="M20 100 Q86 58 140 78 Q194 98 250 64 Q278 44 285 62" stroke="#A855F7" stroke-width="4.5" fill="none"/>
+        <!-- Hawaiian fishhook (makau) — large, central -->
+        <path d="M142 65 L142 180 Q142 225 175 225 Q208 225 208 192" stroke="#A855F7" stroke-width="9" stroke-linecap="round" fill="none"/>
+        <circle cx="142" cy="52" r="9" fill="#A855F7"/>
+        <!-- Tribal notch marks on hook shaft -->
+        <line x1="130" y1="95" x2="142" y2="95" stroke="#A855F7" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+        <line x1="130" y1="115" x2="142" y2="115" stroke="#A855F7" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+        <line x1="130" y1="135" x2="142" y2="135" stroke="#A855F7" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+        <!-- Ground line -->
+        <line x1="15" y1="262" x2="285" y2="262" stroke="#A855F7" stroke-width="3" opacity="0.25"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <span class="type-tag" style="background:#A855F720;color:#A855F7">No Text</span>
+      <span class="type-tag" style="background:#A855F720;color:#A855F7">Symbol</span>
+      <h3><span class="color-dot" style="background:#A855F7"></span>Makau Wave</h3>
+      <p>Hawaiian fishhook (makau — provider, strength) over flowing land contour lines with tribal notch marks. Pure symbol, no text needed.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 6. KAPA HOUSE — "LAIE HONUA" — Cyan -->
+  <!-- ============================================================ -->
+  <div class="card" onclick="openModal(5)">
+    <div class="card-icon" style="background:#0a0a0a">
+      <svg viewBox="0 0 300 330" fill="none">
+        <defs>
+          <clipPath id="s6">
+            <path d="M150 35 L275 130 L275 265 L25 265 L25 130Z"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#s6)">
+          <path d="M15 80 Q82 68 150 74 Q218 80 285 68" stroke="#06D6A0" stroke-width="3" fill="none" opacity="0.5"/>
+          <path d="M15 104 Q82 90 150 96 Q218 102 285 90" stroke="#06D6A0" stroke-width="3" fill="none" opacity="0.55"/>
+          <path d="M15 128 Q82 112 150 118 Q218 124 285 112" stroke="#06D6A0" stroke-width="3" fill="none" opacity="0.6"/>
+          <path d="M15 152 Q82 134 150 140 Q218 146 285 134" stroke="#06D6A0" stroke-width="3.5" fill="none" opacity="0.65"/>
+          <path d="M15 176 Q82 156 150 162 Q218 168 285 156" stroke="#06D6A0" stroke-width="3.5" fill="none" opacity="0.7"/>
+          <path d="M15 200 Q82 178 150 184 Q218 190 285 178" stroke="#06D6A0" stroke-width="3.5" fill="none" opacity="0.8"/>
+          <path d="M15 224 Q82 200 150 206 Q218 212 285 200" stroke="#06D6A0" stroke-width="4" fill="none" opacity="0.9"/>
+          <path d="M15 248 Q82 222 150 228 Q218 234 285 222" stroke="#06D6A0" stroke-width="4" fill="none"/>
+          <!-- Kapa zigzag bands -->
+          <path d="M20 155 L45 142 L70 155 L95 142 L120 155 L145 142 L170 155 L195 142 L220 155 L245 142 L270 155 L295 142" stroke="#06D6A0" stroke-width="4.5" fill="none"/>
+          <path d="M20 215 L45 228 L70 215 L95 228 L120 215 L145 228 L170 215 L195 228 L220 215 L245 228 L270 215 L295 228" stroke="#06D6A0" stroke-width="4.5" fill="none"/>
+        </g>
+        <path d="M150 35 L275 130 L275 265 L25 265 L25 130Z" stroke="#06D6A0" stroke-width="5" fill="none"/>
+        <!-- Door -->
+        <rect x="120" y="195" width="60" height="70" rx="4" stroke="#06D6A0" stroke-width="3.5" fill="#0a0a0a"/>
+        <circle cx="170" cy="230" r="4" fill="#06D6A0"/>
+        <!-- Text below -->
+        <text x="150" y="300" text-anchor="middle" fill="#06D6A0" font-family="Inter, sans-serif" font-weight="900" font-size="22" letter-spacing="5">LAIE HONUA</text>
+      </svg>
+    </div>
+    <div class="card-info">
+      <span class="type-tag" style="background:#06D6A020;color:#06D6A0">With Name</span>
+      <span class="type-tag" style="background:#06D6A020;color:#06D6A0">Icon</span>
+      <h3><span class="color-dot" style="background:#06D6A0"></span>Kapa House</h3>
+      <p>House silhouette with kapa cloth zigzag patterns and topo contours. Door at center. "LAIE HONUA" below.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 7. TRIBAL TERRAIN — No Words — Multi-color gradient -->
+  <!-- ============================================================ -->
+  <div class="card" onclick="openModal(6)">
+    <div class="card-icon" style="background:#0a0a0a">
+      <svg viewBox="0 0 300 300" fill="none">
+        <!-- Wide landscape contour layers -->
+        <path d="M15 252 Q70 242 125 248 Q175 254 228 242 Q262 235 285 240" stroke="#0EA5E9" stroke-width="4" fill="none"/>
+        <path d="M15 232 Q72 218 128 226 Q178 234 230 218 Q264 208 285 216" stroke="#0EA5E9" stroke-width="4" fill="none"/>
+        <path d="M15 210 Q74 192 130 202 Q180 212 232 192 Q265 180 285 190" stroke="#14B8A6" stroke-width="4" fill="none"/>
+        <path d="M15 188 Q76 166 132 178 Q182 190 234 166 Q266 152 285 164" stroke="#14B8A6" stroke-width="4" fill="none"/>
+        <path d="M15 166 Q78 140 134 154 Q184 168 236 140 Q267 124 285 138" stroke="#22C55E" stroke-width="4.5" fill="none"/>
+        <path d="M15 144 Q80 114 136 130 Q186 146 238 114 Q268 96 285 112" stroke="#EAB308" stroke-width="4.5" fill="none"/>
+        <path d="M15 122 Q82 88 138 106 Q188 124 240 88 Q269 68 285 86" stroke="#EAB308" stroke-width="4.5" fill="none"/>
+        <path d="M15 100 Q84 62 140 82 Q190 102 242 62 Q270 40 285 60" stroke="#F97316" stroke-width="5" fill="none"/>
+        <path d="M15 78 Q86 36 142 58 Q192 80 244 36 Q271 12 285 34" stroke="#EF4444" stroke-width="5" fill="none"/>
+        <path d="M15 56 Q88 10 144 34 Q194 58 246 10 Q272 -14 285 8" stroke="#EF4444" stroke-width="5" fill="none"/>
+        <!-- Tribal triangle overlay band -->
+        <path d="M30 175 L52 158 L74 175 L96 158 L118 175 L140 158 L162 175 L184 158 L206 175 L228 158 L250 175 L272 158" stroke="#F472B6" stroke-width="5" fill="none"/>
+        <!-- Summit markers -->
+        <circle cx="142" cy="45" r="6" fill="none" stroke="#EF4444" stroke-width="2.5"/>
+        <circle cx="142" cy="45" r="2.5" fill="#EF4444"/>
+        <circle cx="244" cy="22" r="5" fill="none" stroke="#EF4444" stroke-width="2" opacity="0.6"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <span class="type-tag" style="background:#14B8A620;color:#14B8A6">No Text</span>
+      <span class="type-tag" style="background:#EAB30820;color:#EAB308">Landscape</span>
+      <h3><span class="color-dot" style="background:#0EA5E9"></span><span class="color-dot" style="background:#22C55E"></span><span class="color-dot" style="background:#EAB308"></span><span class="color-dot" style="background:#EF4444"></span>Tribal Terrain</h3>
+      <p>Full elevation landscape — ocean blue → green → gold → red summit — with tribal triangle band. The whole island story in one mark.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 8. TIKI TOTEM — "LaieHonua.com" — Deep Purple -->
+  <!-- ============================================================ -->
+  <div class="card" onclick="openModal(7)">
+    <div class="card-icon" style="background:#0a0a0a">
+      <svg viewBox="0 0 300 340" fill="none">
+        <defs>
+          <clipPath id="s8">
+            <path d="M100 30 L200 30 Q235 30 235 65 L235 100 Q235 122 215 132 L215 240 Q215 272 182 272 L118 272 Q85 272 85 240 L85 132 Q65 122 65 100 L65 65 Q65 30 100 30Z"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#s8)">
+          <path d="M55 42 Q112 34 165 40 Q218 46 255 36" stroke="#7C3AED" stroke-width="3.5" fill="none" opacity="0.45"/>
+          <path d="M55 64 Q112 56 165 62 Q218 68 255 58" stroke="#7C3AED" stroke-width="3.5" fill="none" opacity="0.52"/>
+          <path d="M55 86 Q112 78 165 84 Q218 90 255 80" stroke="#7C3AED" stroke-width="3.5" fill="none" opacity="0.6"/>
+          <path d="M55 108 Q112 100 165 106 Q218 112 255 102" stroke="#7C3AED" stroke-width="3.5" fill="none" opacity="0.68"/>
+          <path d="M55 130 Q112 122 165 128 Q218 134 255 124" stroke="#7C3AED" stroke-width="3.5" fill="none" opacity="0.74"/>
+          <path d="M55 152 Q112 144 165 150 Q218 156 255 146" stroke="#7C3AED" stroke-width="3.5" fill="none" opacity="0.8"/>
+          <path d="M55 174 Q112 166 165 172 Q218 178 255 168" stroke="#7C3AED" stroke-width="3.5" fill="none" opacity="0.85"/>
+          <path d="M55 196 Q112 188 165 194 Q218 200 255 190" stroke="#7C3AED" stroke-width="3.5" fill="none" opacity="0.9"/>
+          <path d="M55 218 Q112 210 165 216 Q218 222 255 212" stroke="#7C3AED" stroke-width="3.5" fill="none" opacity="0.94"/>
+          <path d="M55 240 Q112 232 165 238 Q218 244 255 234" stroke="#7C3AED" stroke-width="3.5" fill="none"/>
+          <path d="M55 262 Q112 254 165 260 Q218 266 255 256" stroke="#7C3AED" stroke-width="3.5" fill="none"/>
+        </g>
+        <!-- Tiki face -->
+        <rect x="108" y="68" width="30" height="20" rx="5" stroke="#7C3AED" stroke-width="4" fill="#0a0a0a"/>
+        <rect x="162" y="68" width="30" height="20" rx="5" stroke="#7C3AED" stroke-width="4" fill="#0a0a0a"/>
+        <path d="M118 108 Q150 128 182 108" stroke="#7C3AED" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+        <!-- Outline -->
+        <path d="M100 30 L200 30 Q235 30 235 65 L235 100 Q235 122 215 132 L215 240 Q215 272 182 272 L118 272 Q85 272 85 240 L85 132 Q65 122 65 100 L65 65 Q65 30 100 30Z" stroke="#7C3AED" stroke-width="5" fill="none"/>
+        <!-- Side notches -->
+        <line x1="85" y1="160" x2="72" y2="160" stroke="#7C3AED" stroke-width="4.5" stroke-linecap="round"/>
+        <line x1="85" y1="188" x2="72" y2="188" stroke="#7C3AED" stroke-width="4.5" stroke-linecap="round"/>
+        <line x1="85" y1="216" x2="72" y2="216" stroke="#7C3AED" stroke-width="4.5" stroke-linecap="round"/>
+        <line x1="215" y1="160" x2="228" y2="160" stroke="#7C3AED" stroke-width="4.5" stroke-linecap="round"/>
+        <line x1="215" y1="188" x2="228" y2="188" stroke="#7C3AED" stroke-width="4.5" stroke-linecap="round"/>
+        <line x1="215" y1="216" x2="228" y2="216" stroke="#7C3AED" stroke-width="4.5" stroke-linecap="round"/>
+        <!-- URL -->
+        <text x="150" y="310" text-anchor="middle" fill="#7C3AED" font-family="Inter, sans-serif" font-weight="500" font-size="15" letter-spacing="2" opacity="0.75">LaieHonua.com</text>
+      </svg>
+    </div>
+    <div class="card-info">
+      <span class="type-tag" style="background:#7C3AED20;color:#7C3AED">With URL</span>
+      <span class="type-tag" style="background:#7C3AED20;color:#7C3AED">Symbolic</span>
+      <h3><span class="color-dot" style="background:#7C3AED"></span>Tiki Guardian</h3>
+      <p>Modern tiki totem with contour fill, traditional notch marks, and classic tiki face. "LaieHonua.com" below. Protector of the land.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 9. CONTOUR COMPASS — "LAIE HONUA LLC" — Coral + Teal -->
+  <!-- ============================================================ -->
+  <div class="card" onclick="openModal(8)">
+    <div class="card-icon" style="background:#0a0a0a">
+      <svg viewBox="0 0 300 330" fill="none">
+        <defs>
+          <clipPath id="s9">
+            <circle cx="150" cy="150" r="120"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#s9)">
+          <!-- Organic concentric topo contours -->
+          <path d="M150 278 Q42 268 38 198 Q32 125 58 75 Q88 25 150 20 Q212 25 242 75 Q268 125 262 198 Q258 268 150 278" stroke="#14B8A6" stroke-width="2.5" fill="none" opacity="0.2"/>
+          <path d="M150 258 Q58 248 55 192 Q50 140 70 95 Q96 48 150 44 Q204 48 230 95 Q250 140 245 192 Q242 248 150 258" stroke="#14B8A6" stroke-width="2.5" fill="none" opacity="0.32"/>
+          <path d="M150 238 Q74 230 72 184 Q68 148 84 112 Q106 68 150 65 Q194 68 216 112 Q232 148 228 184 Q226 230 150 238" stroke="#14B8A6" stroke-width="3" fill="none" opacity="0.44"/>
+          <path d="M150 218 Q90 212 88 178 Q86 155 98 130 Q116 92 150 90 Q184 92 202 130 Q214 155 212 178 Q210 212 150 218" stroke="#14B8A6" stroke-width="3" fill="none" opacity="0.56"/>
+          <path d="M150 198 Q106 193 104 172 Q102 158 112 142 Q126 118 150 116 Q174 118 188 142 Q198 158 196 172 Q194 193 150 198" stroke="#14B8A6" stroke-width="3.5" fill="none" opacity="0.7"/>
+          <path d="M150 178 Q122 174 120 164 Q118 158 124 150 Q134 138 150 137 Q166 138 176 150 Q182 158 180 164 Q178 174 150 178" stroke="#14B8A6" stroke-width="3.5" fill="none" opacity="0.85"/>
+        </g>
+        <!-- Compass tribal arrows -->
+        <path d="M150 18 L160 52 L150 42 L140 52Z" fill="#FF6B6B"/>
+        <path d="M150 282 L140 248 L150 258 L160 248Z" fill="#14B8A6"/>
+        <path d="M18 150 L52 140 L42 150 L52 160Z" fill="#14B8A6"/>
+        <path d="M282 150 L248 160 L258 150 L248 140Z" fill="#14B8A6"/>
+        <circle cx="150" cy="150" r="6" fill="#FF6B6B"/>
+        <circle cx="150" cy="150" r="120" stroke="#14B8A6" stroke-width="4.5" fill="none"/>
+        <!-- Text -->
+        <text x="150" y="302" text-anchor="middle" fill="#14B8A6" font-family="Inter, sans-serif" font-weight="900" font-size="19" letter-spacing="5">LAIE HONUA</text>
+        <text x="150" y="322" text-anchor="middle" fill="#14B8A6" font-family="Inter, sans-serif" font-weight="300" font-size="10" letter-spacing="4" opacity="0.5">LLC</text>
+      </svg>
+    </div>
+    <div class="card-info">
+      <span class="type-tag" style="background:#14B8A620;color:#14B8A6">With Name</span>
+      <span class="type-tag" style="background:#FF6B6B20;color:#FF6B6B">Navigation</span>
+      <h3><span class="color-dot" style="background:#14B8A6"></span><span class="color-dot" style="background:#FF6B6B"></span>Contour Compass</h3>
+      <p>Organic topo contour rings in compass form with tribal arrow cardinals. Red north, teal body. "LAIE HONUA LLC" below.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 10. HONUA SEAL — No Words — Sunset Gradient (Red → Gold) -->
+  <!-- ============================================================ -->
+  <div class="card" onclick="openModal(9)">
+    <div class="card-icon" style="background:#0a0a0a">
+      <svg viewBox="0 0 300 300" fill="none">
+        <defs>
+          <clipPath id="s10">
+            <!-- Rounded square / seal shape -->
+            <rect x="30" y="30" width="240" height="240" rx="40"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#s10)">
+          <!-- Contour lines filling seal — sunset gradient colors -->
+          <path d="M20 55 Q85 42 150 48 Q215 54 280 42" stroke="#FF4444" stroke-width="4" fill="none"/>
+          <path d="M20 78 Q85 64 150 70 Q215 76 280 64" stroke="#FF4444" stroke-width="4" fill="none"/>
+          <path d="M20 101 Q85 86 150 92 Q215 98 280 86" stroke="#FF6633" stroke-width="4" fill="none"/>
+          <path d="M20 124 Q85 108 150 114 Q215 120 280 108" stroke="#FF8822" stroke-width="4" fill="none"/>
+          <!-- Tribal band -->
+          <path d="M20 142 L45 130 L70 142 L95 130 L120 142 L145 130 L170 142 L195 130 L220 142 L245 130 L270 142 L295 130" stroke="#FFAA00" stroke-width="5.5" fill="none"/>
+          <path d="M20 158 L45 170 L70 158 L95 170 L120 158 L145 170 L170 158 L195 170 L220 158 L245 170 L270 158 L295 170" stroke="#FFAA00" stroke-width="5.5" fill="none"/>
+          <!-- Continue contours below band -->
+          <path d="M20 182 Q85 166 150 172 Q215 178 280 166" stroke="#FFAA00" stroke-width="4" fill="none"/>
+          <path d="M20 204 Q85 186 150 192 Q215 198 280 186" stroke="#FFB800" stroke-width="4" fill="none"/>
+          <path d="M20 226 Q85 208 150 214 Q215 220 280 208" stroke="#FFCC22" stroke-width="4" fill="none"/>
+          <path d="M20 248 Q85 230 150 236 Q215 242 280 230" stroke="#FFD700" stroke-width="4" fill="none"/>
+          <path d="M20 270 Q85 252 150 258 Q215 264 280 252" stroke="#FFD700" stroke-width="4" fill="none"/>
+        </g>
+        <!-- Seal outline -->
+        <rect x="30" y="30" width="240" height="240" rx="40" stroke="#FFAA00" stroke-width="5" fill="none"/>
+        <!-- Inner frame -->
+        <rect x="45" y="45" width="210" height="210" rx="30" stroke="#FFAA00" stroke-width="2" fill="none" opacity="0.3"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <span class="type-tag" style="background:#FFAA0020;color:#FFAA00">No Text</span>
+      <span class="type-tag" style="background:#FF444420;color:#FF4444">Seal</span>
+      <h3><span class="color-dot" style="background:#FF4444"></span><span class="color-dot" style="background:#FFAA00"></span><span class="color-dot" style="background:#FFD700"></span>Honua Seal</h3>
+      <p>Rounded seal with sunset-gradient contour lines (red to gold) and bold tribal zigzag band. App icon ready. Hawaiian sunset over land.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <div class="modal-content" id="modalContent"></div>
+</div>
+
+<div class="footer">
+  <p>Laie Honua LLC — Logo Concepts by Kirby — Hammond & Bonds</p>
+</div>
+
+<script>
+const cards = document.querySelectorAll('.card');
+const modal = document.getElementById('modal');
+const modalContent = document.getElementById('modalContent');
+
+function openModal(index) {
+  const card = cards[index];
+  const svg = card.querySelector('svg').outerHTML;
+  const name = card.querySelector('h3').innerHTML;
+  const desc = card.querySelector('.card-info p').textContent;
+  const tags = card.querySelector('.card-info').querySelectorAll('.type-tag');
+  let tagHtml = '';
+  tags.forEach(t => tagHtml += t.outerHTML);
+  
+  modalContent.innerHTML = `
+    ${svg}
+    <div style="margin-bottom:8px">${tagHtml}</div>
+    <h2>${name}</h2>
+    <p>${desc}</p>
+    <button class="modal-close" onclick="closeModal(event, true)">Close</button>
+  `;
+  modal.classList.add('active');
+}
+
+function closeModal(e, force) {
+  if (force || e.target === modal) {
+    modal.classList.remove('active');
+  }
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') modal.classList.remove('active');
+});
+</script>
+
+</body>
+</html>
